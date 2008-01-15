@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC
+  "-//Apache Software Foundation//Tapestry Specification 3.0//EN"
+  "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd">
+<page-specification class="com.beckproduct.persistence.tapestry.pages.ExceptionPage">
+    <description>
+        Exception Page
+    </description>
+    
+    <property-specification name="exception"
+        type="java.lang.Throwable"
+        persistent="yes"/>
+        
+    <property-specification name="exceptionBinding"
+        type="org.apache.tapestry.IBinding"
+        persistent="yes"/>
+
+</page-specification>

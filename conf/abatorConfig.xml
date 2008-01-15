@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abatorConfiguration
+  PUBLIC "-//Apache Software Foundation//DTD Abator for iBATIS Configuration 1.0//EN"
+  "http://ibatis.apache.org/dtd/abator-config_1_0.dtd">
+
+<abatorConfiguration>
+	<abatorContext id="mysqlTables" generatorSet="Java2" defaultModelType="flat">
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/iBatis" userId="root"
+			password="">
+			<classPathEntry
+				location="lib/mysql-3.0.12/lib/mysql-connector-java-3.0.12-production-bin.jar" />
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="com.beckproduct.persistence.domain"
+			targetProject="src">
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.beckproduct.persistence.domain"
+			targetProject="src" />
+
+		<table schema="iBatis" tableName="person"
+			domainObjectName="IBatisPersonGenerated" enableSelectByExample="false"
+			enableDeleteByExample="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+
+	</abatorContext>
+</abatorConfiguration>

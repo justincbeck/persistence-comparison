@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="hibernateDataSource"
+		class="org.springframework.jndi.JndiObjectFactoryBean"
+		singleton="true">
+		<property name="jndiName">
+			<value>java:/HibernateDS</value>
+		</property>
+	</bean>
+
+	<bean id="hibernateAutoProxyCreator"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="interceptorNames">
+			<list>
+				<value>hibernateTransactionInterceptor</value>
+			</list>
+		</property>
+		<property name="beanNames">
+			<list>
+				<value>hibernatePersonService</value>
+				<value>hibernatePersonRepository</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="hibernateTransactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager">
+			<ref bean="hibernateTransactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="com.beckproduct.persistence.service.PersonServiceImpl.*">PROPAGATION_REQUIRED</prop>
+				<prop key="com.beckproduct.persistence.repository.hibernate.HibernatePersonRepositoryImpl.*">PROPAGATION_MANDATORY</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="hibernateTransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="localSessionFactoryBean" />
+		</property>
+	</bean>
+
+	<bean id="localSessionFactoryBean"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="hibernateDataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/intalgent/persistence/domain/HibernatePerson.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.connection.release_mode">auto</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="hibernatePersonService"
+		class="com.beckproduct.persistence.service.PersonServiceImpl">
+		<property name="personRepository">
+			<ref local="hibernatePersonRepository" />
+		</property>
+	</bean>
+
+	<bean id="hibernatePersonRepository"
+		class="com.beckproduct.persistence.repository.hibernate.HibernatePersonRepositoryImpl">
+		<property name="sessionFactory">
+			<ref local="localSessionFactoryBean" />
+		</property>
+	</bean>
+</beans>

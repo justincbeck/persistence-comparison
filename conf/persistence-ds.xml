@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources>
+        <local-tx-datasource>
+                <jndi-name>HibernateDS</jndi-name>
+                <connection-url>jdbc:mysql://localhost:3306/hibernate</connection-url>
+                <driver-class>com.mysql.jdbc.Driver</driver-class>
+                <user-name>root</user-name>
+                <password></password>
+                <check-valid-connection-sql>select 1 from Person</check-valid-connection-sql>
+                <min-pool-size>5</min-pool-size>
+                <max-pool-size>200</max-pool-size>
+                <blocking-timeout-millis>500000</blocking-timeout-millis>
+                <idle-timeout-minutes>15</idle-timeout-minutes>
+        </local-tx-datasource>
+        <local-tx-datasource>
+                <jndi-name>iBatisDS</jndi-name>
+                <connection-url>jdbc:mysql://localhost:3306/iBatis</connection-url>
+                <driver-class>com.mysql.jdbc.Driver</driver-class>
+                <user-name>root</user-name>
+                <password></password>
+                <check-valid-connection-sql>select 1 from Person</check-valid-connection-sql>
+                <min-pool-size>5</min-pool-size>
+                <max-pool-size>200</max-pool-size>
+                <blocking-timeout-millis>500000</blocking-timeout-millis>
+                <idle-timeout-minutes>15</idle-timeout-minutes>
+        </local-tx-datasource>
+        <local-tx-datasource>
+                <jndi-name>EJBDS</jndi-name>
+                <connection-url>jdbc:mysql://localhost:3306/ejb</connection-url>
+                <driver-class>com.mysql.jdbc.Driver</driver-class>
+                <user-name>root</user-name>
+                <password></password>
+                <check-valid-connection-sql>select 1 from Person</check-valid-connection-sql>
+                <min-pool-size>5</min-pool-size>
+                <max-pool-size>200</max-pool-size>
+                <blocking-timeout-millis>500000</blocking-timeout-millis>
+                <idle-timeout-minutes>15</idle-timeout-minutes>
+        </local-tx-datasource>
+</datasources>

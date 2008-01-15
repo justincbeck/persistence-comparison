@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="iBatisDataSource"
+		class="org.springframework.jndi.JndiObjectFactoryBean"
+		singleton="true">
+		<property name="jndiName">
+			<value>java:/iBatisDS</value>
+		</property>
+	</bean>
+
+	<bean id="iBatisAutoProxyCreator"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="interceptorNames">
+			<list>
+				<value>iBatisTransactionInterceptor</value>
+			</list>
+		</property>
+		<property name="beanNames">
+			<list>
+				<value>*Service</value>
+				<value>**/iBatis/*Repository</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="iBatisTransactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager">
+			<ref bean="iBatisTransactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*Repository">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="sqlMapClientFactoryBean"
+		class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation">
+			<value>/WEB-INF/sqlMap-config.xml</value>
+		</property>
+	</bean>
+
+	<bean id="iBatisTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref local="iBatisDataSource" />
+		</property>
+	</bean>
+	
+	<bean id="iBatisPersonService"
+		class="com.beckproduct.persistence.service.PersonServiceImpl">
+		<property name="personRepository">
+			<ref local="iBatisPersonRepository" />
+		</property>
+	</bean>
+
+	<bean id="iBatisPersonRepository"
+		class="com.beckproduct.persistence.repository.iBatis.IBatisPersonRepositoryImpl">
+		<property name="sqlMapClient">
+			<ref local="sqlMapClientFactoryBean" />
+		</property>
+	</bean>
+</beans>

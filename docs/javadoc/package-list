@@ -1,0 +1,12 @@
+com.stearns.domain
+com.stearns.exception
+com.stearns.executable
+com.stearns.parser
+com.stearns.repository
+com.stearns.repository.mock
+com.stearns.service
+com.stearns.test.unit.parser
+com.stearns.test.unit.repository
+com.stearns.test.unit.service
+com.stearns.test.unit.utilities
+com.stearns.utilities

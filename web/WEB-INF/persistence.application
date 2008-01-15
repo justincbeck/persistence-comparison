@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC
+  "-//Apache Software Foundation//Tapestry Specification 3.0//EN"
+  "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd">
+
+<application name="persistence" engine-class="org.apache.tapestry.engine.BaseEngine">
+    <description>Persistence Comparison</description>
+    
+    <library id="contrib" specification-path="/org/apache/tapestry/contrib/Contrib.library"/>
+
+    <page name="Home" specification-path="/WEB-INF/Home.page"/>
+    <page name="Exception" specification-path="/WEB-INF/Exception.page"/>
+
+    <page name="hibernate" specification-path="/WEB-INF/pages/Hibernate.page"/>
+    <page name="iBatis" specification-path="/WEB-INF/pages/iBatis.page"/>
+    <page name="ejb" specification-path="/WEB-INF/pages/EJB.page"/>
+    
+    <component-type type="Border" specification-path="/WEB-INF/Border.jwc"/>
+</application>
