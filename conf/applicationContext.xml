@@ -60,7 +60,7 @@
 		</property>
 		<property name="mappingResources">
 			<list>
-				<value>com/intalgent/persistence/domain/HibernatePerson.hbm.xml</value>
+				<value>com/beckproduct/persistence/domain/HibernatePerson.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
