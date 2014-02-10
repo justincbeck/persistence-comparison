@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="xdoclet-1.2.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/xdoclet-1.2.3/lib/xdoclet-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xdoclet-1.2.3/lib/xdoclet-hibernate-module-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xdoclet-1.2.3/lib/xdoclet-spring-module-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xdoclet-1.2.3/lib/xdoclet-web-module-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xdoclet-1.2.3/lib/xdoclet-webwork-module-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xdoclet-1.2.3/lib/xdoclet-xdoclet-module-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xdoclet-1.2.3/lib/xjavadoc-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

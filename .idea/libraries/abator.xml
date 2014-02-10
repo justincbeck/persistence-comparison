@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="abator">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/abator-1.0.0/lib/abator.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="jakarta-oro-2.0.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/tapestry-4.0.2/lib/jakarta-oro-2.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tapestry-4.0.2/lib/javassist.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tapestry-4.0.2/lib/ognl-2.6.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tapestry-4.0.2/lib/tapestry-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tapestry-4.0.2/lib/tapestry-annotations-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tapestry-4.0.2/lib/tapestry-contrib-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tapestry-4.0.2/lib/tapestry-portlet-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tapestry-4.0.2/lib/tapestry-spring-0.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Person">
+	<insert id="createPerson" parameterClass="com.beckproduct.persistence.domain.IBatisPerson">
+		INSERT INTO person(id, name, created) VALUES(#id#, #name#, #created#)
+	</insert>
+
+	<select id="getPerson" parameterClass="string" resultClass="com.beckproduct.persistence.domain.IBatisPerson">
+		SELECT id, name, created from person WHERE id = #value#
+	</select>
+
+	<update id="updatePerson" parameterClass="com.beckproduct.persistence.domain.IBatisPerson">
+		UPDATE person SET name = #name#, created = #created# WHERE id = #id#
+	</update>
+
+	<delete id="deletePerson" parameterClass="com.beckproduct.persistence.domain.IBatisPerson">
+		DELETE FROM person WHERE id = #id#
+	</delete>
+</sqlMap>

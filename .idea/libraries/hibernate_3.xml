@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="hibernate-3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-3.0.5/lib/antlr-2.7.5H3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-3.0.5/lib/cglib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-3.0.5/lib/commons-collections-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-3.0.5/lib/dom4j-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-3.0.5/lib/hibernate3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hibernate-3.0.5/lib/odmg-3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

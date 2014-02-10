@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="hivemind-1.1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hivemind-1.1.1/lib/hivemind-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hivemind-1.1.1/lib/hivemind-jmx-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hivemind-1.1.1/lib/hivemind-lib-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
